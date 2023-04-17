@@ -6,13 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="invoice.css">
     <link rel="stylesheet" href="invoice.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
     <title>Odinukwe Stores</title>
 </head>
 <body>
     <div class="invoiceContainer">
+        <div class="taxInvoice"> Tax invoice</div>
         <div class="header">
-            
+            <h1 class="storeName">Odinukwe Store</h1>
+            <address>#55 Old Aba ROAD rumuomasi <br> Port 
+            Harcourt <br> River State.
+            </address>
+           <span class="tel"> <b>Tel.</b> 08033096584</span>
         </div>
+        <div class="invoiceId">
+            <span>
+                <b>Invoice No. :</b> INV-091 
+            </span>
+            <span>
+                <b>Invoice Date:</b> Date
+            </span>
+        </div>
+
+        <div class="columnTitle">
+            <div class="item" >item </div>
+            <div>Rate  </div>
+            <div>Qty   </div>
+            <div> amount </div>
+        </div>
+
+        <ul class="lists">
+            <li class="litems"> 
+                <span class="desc"> Itexm Name </span>  <span class="rate"
+                >Rat</span>
+                <span class="qty" >Qty</span>
+                <span class="price"
+                >amount</span>
+              </li>
+              
+            <li class="litems"> 
+                <span class="desc"> Item Name </span>  <span class="rate"
+                >Rate</span>
+                <span class="qty" >Qty</span>
+                <span class="price"
+                >amount</span>
+              </li>     
+        </ul>
+
+<div class="count">
+    <div class="itemscount">
+        <span> items: </span><span>10</span>
+    </div>
+    <div class="qtycount">
+        <span> Qty: </span><span>10</span>
+    </div>
+</div>
+
+<div class="paymentinfo">
+    <h2>payment info</h2>
+    <div class="payment">
+        <span>cash</span>
+        <span>9500</span>
+    </div>
+   
+</div>
+<div class="balance">
+    <h2>Balance:</h2> 
+    <span class="balance-item"> 9500</span>
+</div>
+<footer>
+    <div class="enterpayment">
+        <input type="number" name="payment" id="enterpayment">
+       <label for="enterpayment">
+        <img src="./shopping-cart-48.png" alt="">
+       </label> 
+       
+    </div>
+    <div class="barcode">
+        <img src="./icons8-barcode-50.png" alt="" width="100px" height="50px">
+        <img src="./icons8-barcode-50.png" alt="" width="100px" height="50px">
+    </div>
+</footer>
+
+
     </div>
 </body>
 </html>

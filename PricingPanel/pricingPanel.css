@@ -10,7 +10,7 @@ display: flex;
 justify-content:center;
 align-items:center;
 min-height:100vh !important;
-scale: 0.7;
+scale: 0.9;
 }
 
 .panel{ 
@@ -25,7 +25,7 @@ scale: 0.7;
 flex-direction: column;
 text-align: center;
 text-transform: uppercase;
-box-shadow:-4px 4px 15px #202e32, 2px 2px 15px rgb(149, 148, 148);
+box-shadow:-4px 4px 15px #202e32;
 min-height: 100vh;
 
 }
