@@ -4,3 +4,19 @@ body{margin: 0;
 padding: 0;
 background-color: rgb(14, 17, 48);
 font-weight: 600;}
+
+.invoiceContainer{
+    background-color:#dfdcb9;
+    border-radius: 15px;
+    padding: 15px 25px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+align-items:center;
+flex-direction: column;
+text-align: center;
+text-transform: uppercase;
+box-shadow:-4px 4px 15px #202e32, 2px 2px 15px rgb(149, 148, 148);
+min-height: 100vh;
+}
