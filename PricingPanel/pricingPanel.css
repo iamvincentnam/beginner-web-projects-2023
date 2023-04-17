@@ -1,0 +1,110 @@
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* some developers code their css from bigger container down to the smallest(converging). however, I im not used to that. since css has its own madness, I try different things until it works */
+body{
+background-color: #202e32;
+font-family:'open-sans', sans-serif;
+display: flex;
+justify-content:center;
+align-items:center;
+min-height:100vh !important;
+scale: 0.7;
+}
+
+.panel{ 
+    background-color:#dfdcb9;
+     border-radius: 15px;
+     padding: 15px 25px;
+     width: 100%;
+     margin: 0 auto;
+     max-width: 860px;
+     display: flex;
+ align-items:center;
+flex-direction: column;
+text-align: center;
+text-transform: uppercase;
+box-shadow:-4px 4px 15px #202e32, 2px 2px 15px rgb(149, 148, 148);
+min-height: 100vh;
+
+}
+.pricing-plan{
+border-bottom: 1px solid rgb(82, 82, 82);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+.pricing-plan:last-of-type {border-bottom: none;}
+
+
+.pricing-img{
+margin-bottom: 25px;
+max-width:100%;
+
+}
+.pricing-plan .pricing-header{
+    color: #888;
+font-weight: 600;
+letter-spacing: 2px;}
+
+.pricing-plan .pricing-features{
+    margin: 50px 0 25px;
+    list-style-type:none;
+    color:#202e32;
+}
+
+.pricing-features .pricing-features-item{font-weight: 600;
+letter-spacing: 1px;
+font-size: 12px;
+line-height: 1.5;
+padding: 15px 0;
+border-top: 1px solid #202e3230;}
+
+.pricing-plan .pricing-price{
+color: #202e32;
+display: block;
+font-size: 24px;
+font-weight:700;
+}
+.pricing-features-item:last-of-type{
+border-bottom: 1px solid #202e3230;
+}
+.pricing-button{border: 1px solid #586c5c;
+border-radius: 7px;
+color:#40453c;
+display: inline-block;
+padding: 14px 30px;
+text-decoration: none;
+transition: 0.3s ease-in-out all;
+margin: 25px 0;
+}
+.pricing-button:hover{ background-color:#586c5c;
+    border: none;
+    color:white;
+}
+.pricing-button:focus{
+   background-color:#40453c;
+   color:white;
+   border: none;
+}
+.is-featured{background-color: #586c5cc0;
+    border: none;
+color: white;}
+
+@media (min-width:800px){
+    .panel{flex-direction: row;}  
+
+    .pricing-plan{
+border-bottom: none;
+border-right: 1px solid #202e3230;
+padding: 20px 40px;
+    }
+    .pricing-plan:last-of-type{
+        border-right: none;
+    }
+
+
+}

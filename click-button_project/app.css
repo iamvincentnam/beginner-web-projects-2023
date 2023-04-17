@@ -1,0 +1,39 @@
+
+ul li  {
+    background-color: #B10DC9;
+  }
+  .highlight{ background-color: #7FDBFF !important;
+  }
+  #btn_div button{background-color: #586c5c;
+                  padding: 10px; outline: none;
+          border: none;
+          margin-bottom: 0.5rem;
+      border-radius: 5px;
+  color: rgb(255, 255, 255); font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+  }
+  #btn_div button:hover{background-color: white;
+  color: orange;}
+  #btn_div{display: flex;
+      box-sizing: border-box;
+  max-height: 500px;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+  transition: 2s ease-in-out;}
+  /*  */
+  .info_bar{text-align: center;
+  width: 950px; background-color: #85937a;
+  margin: 0 auto;
+  height: 100px;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+  color: #055;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;}
+  .info_bar .question{color: white;}
+  .Answer_h3{background-color: #dfdcb9;}
+  

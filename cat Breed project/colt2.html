@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My tweet app</title>
+<style>
+    html{ box-sizing: border-box;
+    }
+    *{box-sizing: border-box;}
+     #tweetForm{
+        display: flex;
+    margin:10rem auto;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #055;
+    padding: 1rem;
+    box-sizing: border-box;
+    height:300px;
+    width: 25% !important;
+border-radius: 50px;}
+    #tweetForm input{  
+    color: rgb(21, 21, 21);
+    background-color: rgba(208, 208, 208);
+    border-radius: 10px;
+    border: none;
+    width: 60%;
+    height: 2.5rem;
+margin-bottom:1rem ;
+padding: 0.2rem;
+border: none;
+outline: none;
+    }
+    button{ padding:0.5rem 1rem;
+background-color: rgb(211, 142, 15);
+   border: 1px inset rgb(211, 142, 15);
+border-radius: 7px;
+cursor: pointer;
+color: white;
+font-size: 14px;
+letter-spacing: 2px;
+font-weight: 700;
+font-family: 'Roboto', sans-serif;}
+#send_tweet:focus{background-color:#6b492a ;}
+#list{background-color: #055;
+     color: white;
+      font-weight: 700;
+     max-width:600px; 
+   
+    list-style-type: none;
+margin: 2rem 10rem;
+padding: 1rem;
+/* padding-left: 0; */
+display:flex; 
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+   
+}
+#list .litems{ 
+    display:flex; 
+    justify-content: space-around;
+    align-items:center;
+ 
+    height: 50px;
+    margin: 0;
+    background-color: rgb(211, 142, 15);
+    width:100%; 
+}
+#list .litems >*{width: 30%; background-color: #055; 
+border-right: 1px solid white;
+display: block;}
+</style>
+</head>
+<body>
+    <section>
+ <!-- <ul id="tweetList">
+
+        </ul>
+    </section>
+    <form id="tweetForm">
+     <input type="text" name="username" placeholder="username" autocomplete="off">
+  <input type="tex" name="" placeholder="Tweet" autocomplete="off"> -->
+    <!-- <textarea name="tweet" rows="8"> </textarea>
+        <button type="submit" id="send_tweet">Send Tweet</button>
+    </form>  -->
+
+
+    <h1>Grocery List</h1>
+    <form id="form" >
+        <label for="product">Enter A Product</label>
+        <input type="text" id="product" name="product" autocomplete="off">
+        <label for="item">Enter A Quantity</label>
+        <input type="number" id="item" name="qty" autocomplete="off">
+        <button type="submit" >Submit</button>
+    </form>
+
+    <ul id="list">
+        <li class="litems"> 
+            <span class="desc"> Item Name </span>  <span class="qt"
+            >Quantity</span><span class="total" > price </span>
+          </li>
+    </ul>
+</body>
+<script>
+// const tweetForm = document.querySelector('#tweetForm');
+
+// function mytweetfunc(userName,tweet){
+    
+//     const List = document.querySelector('#tweetList');
+//     const listItem = document.createElement('Li');
+//     if( userName && tweet){
+//         listItem.innerHTML=`<b>${tweet} </b>  <span>----</span> <cite style ="font-style:italic;">${userName} </cite>`;
+//     List.appendChild(listItem);
+ 
+//     }
+   
+    
+// }
+// tweetForm.addEventListener('submit',(e)=>{
+//     e.preventDefault()
+//     const userName = tweetForm.elements.username.value;
+//     const tweet = tweetForm.elements.tweet.value;
+//     tweetForm.reset();
+//     mytweetfunc(userName,tweet);
+
+
+
+// });
+</script>
+<script>
+const productList = document.querySelector('#list');
+let total =productList.querySelector('.total');
+let desc =productList.querySelector('.desc');
+let qty =productList.querySelector('.qt');
+ let randomPrice = Math.floor((Math.random()* 20)+2)  ;
+
+const form = document.querySelector('form');
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+   const qtyValue = form.elements.qty.value; 
+   const productName = form.elements.product.value;
+   const price = randomPrice *qtyValue;
+    const list_item = ` <li class="litems"> 
+            <span class="desc"> ${productName}</span>  <span class="qt"
+            >  ${qtyValue}</span> <span class="total">$${price} </span>  </li>`
+            if(productName && qtyValue){productList.innerHTML += list_item;  
+            }
+  
+  form.reset();          
+});
+
+</script>
+</html>
