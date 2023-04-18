@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="invoice.css">
     <link rel="stylesheet" href="invoice.js">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="icon" href="./shopping-cart-48.png"  type="image/icon type">
     <title>Odinukwe Stores</title>
 </head>
 <body>
-    <div class="invoiceContainer">
+    <div class="invoiceContainer blur_property">
         <div class="taxInvoice"> Tax invoice</div>
         <div class="header">
             <h1 class="storeName">Odinukwe Store</h1>
@@ -27,48 +28,40 @@
                 <b>Invoice Date:</b> Date
             </span>
         </div>
-
+        <form id="form" > 
+            <input type="text" id="product" name="product" autocomplete="off" placeholder="Enter A Product Here">
+          
+            <input type="number" id="item" name="qty" autocomplete="off" placeholder="Enter a Qty">
+            <button type="submit" >SUBMIT</button>
+        </form>
         <div class="columnTitle">
             <div class="item" >item </div>
             <div>Rate  </div>
             <div>Qty   </div>
             <div> amount </div>
         </div>
-
-        <ul class="lists">
-            <li class="litems"> 
-                <span class="desc"> Itexm Name </span>  <span class="rate"
-                >Rat</span>
-                <span class="qty" >Qty</span>
-                <span class="price"
-                >amount</span>
-              </li>
-              
-            <li class="litems"> 
-                <span class="desc"> Item Name </span>  <span class="rate"
-                >Rate</span>
-                <span class="qty" >Qty</span>
-                <span class="price"
-                >amount</span>
-              </li>     
+        <ul class="lists" id="lists">  
+      <li class="litems">  
+    <!-- <span class="desc"> beans </span>  
+    <span class="rate"> 20</span>
+    <span class="qty" >2</span>
+    <span class="price">10 </span> -->    
+    </li>
         </ul>
-
 <div class="count">
     <div class="itemscount">
-        <span> items: </span><span>10</span>
+        <span> items: </span><span id="itemcount_value">0</span>
     </div>
     <div class="qtycount">
-        <span> Qty: </span><span>10</span>
+        <span> Qty: </span><span id="qtycount_value" ></span>
     </div>
 </div>
-
 <div class="paymentinfo">
     <h2>payment info</h2>
     <div class="payment">
         <span>cash</span>
         <span>9500</span>
-    </div>
-   
+    </div> 
 </div>
 <div class="balance">
     <h2>Balance:</h2> 
@@ -87,8 +80,11 @@
         <img src="./icons8-barcode-50.png" alt="" width="100px" height="50px">
     </div>
 </footer>
-
-
     </div>
+    <script src="invoice.js">
+
+    </script>
 </body>
 </html>
+
+
