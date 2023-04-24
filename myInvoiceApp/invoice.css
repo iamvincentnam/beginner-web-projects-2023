@@ -6,6 +6,8 @@ background-color: #202e32;
 font-weight: 400;
 font-family:'open-sans', sans-serif;
 padding: 50px 0;
+scale: 0.9;
+
 }
 .blur_property{
     filter: blur(4px);
@@ -117,6 +119,7 @@ border-bottom: 1px solid #202e3230;
 height: 100%;
 align-items: flex-start;
 flex-direction: column;
+min-height: 50px;
 }
 .item, .desc{
 width:50%;
@@ -145,6 +148,10 @@ font-weight: 800;
 font-size: .9rem;
 text-transform: capitalize;
  }
+ .lists .litems:nth-of-type(odd){
+    background-color: #c5c2a3;;
+ }
+
  .qty,.price,.rate{
    width:10%;
 text-align: center;
@@ -174,15 +181,16 @@ padding:10px 20px;
 text-transform: capitalize;
 }
 .paymentinfo h2
-{margin:0;
+{
 color:  #202e32;
+font-size: 20px;
 
 }
 .paymentinfo .payment{
 display: flex;
 justify-content: space-between;
 align-items: center;
-font-size: 24px;}
+font-size: 20px;}
 .balance{
 color:#202e32;
 padding:10px 20px;
@@ -190,7 +198,9 @@ text-transform: capitalize;
 justify-content:space-between;
 align-items: center;
 display: flex;
+font-size: 20px;
 }
+.balance h2{font-size: 20px;}
 .balance .balance-item{
 font-size:  24px;
 }
@@ -200,7 +210,16 @@ justify-content: space-between;
 height: 60px;
 margin-top: 2rem;
 }
-.enterpayment{
+#enterpaymentForm{
+border:1px solid  #c4c09b;
+height: 50px;
+width: 250px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-radius: 0 0 0 80px;
+}
+/* .enterpayment{
 padding: 5px;
 width: 250px;
 height: 50px;
@@ -209,26 +228,43 @@ align-items: center;
 justify-content: space-between;
 border-radius: 0 0 0 80px;
 border: 1px solid #202e325c;;
+
+} */
+.enterpayment button{
+background-color: transparent;
+border:none;
+padding: 0;
+margin: 0;
+
+}
+.enterpayment button:hover{
+
+scale: 0.9;
+transition: 0.3s ease-in-out all;
 }
 .enterpayment img{
 cursor: pointer;
 margin: 0;
-width: 100%;
+/* width: 100%; */
 height: 100%;
+width: 100%;
 padding: 0;
 
 }
+
 .enterpayment input{
-border: none;
+border:none;
 border-radius: 0 0 0 80px;
 width: 80%;
 height: 100%;
 background-color: transparent;
-padding: 12px;
+padding: 12px 20px;
 font-size: 20px;
 font-weight: 600;
 color: #565758;
+
 }
+.enterpayment input:placeholder-shown{font-size: 14px;}
 .enterpayment input:focus{
 outline: none;
 background-color: #c4c09b;}

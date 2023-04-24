@@ -25,7 +25,7 @@
                 <b>Invoice No. :</b> INV-091 
             </span>
             <span>
-                <b>Invoice Date:</b> Date
+                <b>Invoice Date:</b> <span  class="date" style="display: inline;">Date  </span>
             </span>
         </div>
         <form id="form" > 
@@ -41,12 +41,30 @@
             <div> amount </div>
         </div>
         <ul class="lists" id="lists">  
-      <li class="litems">  
-    <!-- <span class="desc"> beans </span>  
+      <!-- <li class="litems">  
+    <span class="desc"> beans </span>  
     <span class="rate"> 20</span>
     <span class="qty" >2</span>
-    <span class="price">10 </span> -->    
+    <span class="price">$ 10 </span>
     </li>
+       <li class="litems">  
+    <span class="desc"> beans </span>  
+    <span class="rate"> 20</span>
+    <span class="qty" >2</span>
+    <span class="price">$ 0 </span>
+    </li>
+      <li class="litems">  
+    <span class="desc"> beans </span>  
+    <span class="rate"> 20</span>
+    <span class="qty" >2</span>
+    <span class="price">$ 2 </span>
+    </li>
+      <li class="litems">  
+    <span class="desc"> beans </span>  
+    <span class="rate"> 10</span>
+    <span class="qty" >22</span>
+    <span class="price">$ 3</span>
+    </li>  -->
         </ul>
 <div class="count">
     <div class="itemscount">
@@ -55,25 +73,32 @@
     <div class="qtycount">
         <span> Qty: </span><span id="qtycount_value" ></span>
     </div>
+    <div class="subTotal">
+        <span> Subtotal: </span>&#8358<span id="subtotal_value" ><span> 
+    </div>
 </div>
 <div class="paymentinfo">
     <h2>payment info</h2>
     <div class="payment">
         <span>cash</span>
-        <span>9500</span>
+        <span id="cash">₦0</span>
     </div> 
 </div>
 <div class="balance">
     <h2>Balance:</h2> 
-    <span class="balance-item"> 9500</span>
+    <span class="balance-item" id="balance-item">₦0</span>
 </div>
 <footer>
     <div class="enterpayment">
-        <input type="number" name="payment" id="enterpayment">
+        <form id="enterpaymentForm">
+        <input type="number" name="payment" id="enterpayment" placeholder="Enter Amount Here">
        <label for="enterpayment">
+        <button type="submit" name="submit">
         <img src="./shopping-cart-48.png" alt="">
+        </button>
+
        </label> 
-       
+       </form>
     </div>
     <div class="barcode">
         <img src="./icons8-barcode-50.png" alt="" width="100px" height="50px">
