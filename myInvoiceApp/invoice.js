@@ -1,8 +1,8 @@
-const alert_message =alert("This is odinukwe invoice");
+// const alert_message =alert("This is odinukwe invoice");
 setTimeout(()=>{
    const invoiceContainer = document.querySelector('.invoiceContainer');
    invoiceContainer.classList.remove('blur_property');
-   console.log(invoiceContainer)
+   // console.log(invoiceContainer)
 },0)
 
 const productList = document.querySelector('#lists');
@@ -20,13 +20,15 @@ form.addEventListener('submit',(e)=>{
     const list_item = document.createElement('li');
     list_item.classList.add('litems');
     list_item.innerHTML = `<span class="desc"> ${productName} </span>  
-    <span class="rate">&#8358 ${rate}</span>
+    <span class="rate">&#8358 ${rate.toFixed(2)}</span>
     <span class="qty" >${qtyValue}</span>
-    <span class="price">&#8358 ${subTotalPrice} </span>`
+    <span class="price">&#8358 ${subTotalPrice.toFixed(2)} </span>`
      if(productName && qtyValue){
             productList.appendChild(list_item); 
+            subTotalAmountFunc();
             calculateTotalQuantity(); 
             caculateTotalItem();
+           
             }   
             form.reset();
  });
@@ -39,6 +41,7 @@ form.addEventListener('submit',(e)=>{
      totalQty+= quntityValue;
     });
     quantityCount.textContent= totalQty; 
+
  }
  function caculateTotalItem(){
    let itemCount_value = document.querySelector('#itemcount_value');
@@ -48,6 +51,80 @@ form.addEventListener('submit',(e)=>{
    totalItems = i+1;
   }
   itemCount_value.textContent= totalItems;
- console.log(totalItems);
+
  }
 
+ const htmlDate = document.querySelector('.date');
+const dateObject = new Date();
+const month = dateObject.toLocaleString('default', {month:'long'});
+const dateNumber =  dateObject.getDate();
+const year = dateObject.getFullYear();
+
+let dayOfWeekIndex =dateObject.getDay();
+
+htmlDate.textContent =` ${dateNumber} ${month}, ${year}`;
+
+
+const enterpaymentInput = document.querySelector('#enterpayment');
+let data ='';
+const cash = document.querySelector('#cash');
+
+
+enterpaymentInput.addEventListener('input',(e)=>{
+   e.preventDefault();
+  data = e.target.value.trim();
+  data = parseFloat(data);
+  console.log(typeof(data))
+  cash.textContent = `₦${data}`;
+
+ 
+});
+
+// const enterpaymentForm = document.querySelector('#enterpaymentForm');
+// enterpaymentForm.addEventListener('submit',(e)=>{
+//    e.preventDefault();
+//    cash.textContent = data;
+//  enterpaymentForm.reset();
+//  mybalancefunc(data)
+// });
+// function  cashTextContent (cash){
+// }
+
+
+
+const subTotalprice = document.querySelector('#subtotal_value');
+
+function subTotalAmountFunc(){
+   const Allprices = document.querySelectorAll('.price');
+   let intialPrice =0;
+   Allprices.forEach((price)=>{
+   const priceText = price.textContent;
+   
+   const priceValue = parseFloat(priceText.replace('₦','').trim());
+   intialPrice += priceValue;
+   });
+   subTotalprice.textContent =`${intialPrice.toFixed(2)}`;
+console.log( subTotalprice.textContent)
+
+}
+
+function enterpaymentFunc(){
+ cash.textContent = `₦ ${data}`;
+ const intialPrice = parseFloat(subTotalprice.textContent);
+ const enteredCash = parseFloat(data);
+ const difference = enteredCash - intialPrice;
+ mybalancefunc(difference);
+ enterpaymentForm.reset();
+}
+const enterpaymentForm = document.querySelector('#enterpaymentForm');
+enterpaymentForm.addEventListener('submit',(e)=>{
+   e.preventDefault();
+  enterpaymentFunc();
+});
+
+
+
+function mybalancefunc(difference){
+   const myBalance = document.querySelector('#balance-item');
+    myBalance.textContent =  `₦${difference.toFixed(2)}`;   
+}
