@@ -1,9 +1,18 @@
 // const alert_message =alert("This is odinukwe invoice");
+const invoiceContainer = document.querySelector('.invoiceContainer');
 setTimeout(()=>{
-   const invoiceContainer = document.querySelector('.invoiceContainer');
+   
    invoiceContainer.classList.remove('blur_property');
    // console.log(invoiceContainer)
 },0)
+const toggleBackground = document.querySelector('.toggle-dark');
+toggleBackground.addEventListener('click',(e)=>{
+   if(e.target){
+     document.body.classList.toggle('toggleBackground');
+      console.log(body);
+   }
+})
+// toggle background code
 
 const productList = document.querySelector('#lists');
 let desc =productList.querySelector('.desc');
