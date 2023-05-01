@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scoreKeeper.css">
+    <link rel="icon" href="./assets/mancala-boradGame-01.jpg"  type="image/icon type">
+    <link rel="stylesheet" href="score-keeper.js">
+    <link rel="stylesheet" href="scoreKeeper.css">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+  
+
+
+<section class="section">
+    
+<div class="confetti"></div>
+      <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card ">
+                    <div class="card-image">
+                        <figure class="image is-2by1">
+                            <img src="./assets/mancala-boradGame-01.jpg" alt="">
+                        </figure>
+                    </div>
+                    <header class="card-header">
+                      <p class="card-header-title is-size-3">
+                       Ayo  Score Keeper
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <h1 class="title is-1">
+                            <span id="p1Display">0</span>  to <span id="p2Display">0</span> 
+                        </h1>
+                        <p class="subtitle">Use the buttons below, to keep score</p>
+                        <label for="playTo" class="label is-inline is-large">
+                            Play To
+                          </label> 
+                        <div class="select is-rounded is-normal is-success">
+                            
+                            <select name="playTo" id="playTo">
+                                <option value="5">5</option>
+                                <option value="8">8</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            
+                            </select>
+                          </div>
+                      </div>
+                    </div>
+
+                    <footer class="card-footer">
+                        <button id="p1Button" class="button is-primary card-footer-item">+1 Player 1</button>
+                        <button id="p2Button" class="button is-info card-footer-item">+1 Player 2</button>
+                        <button id="resetBtn" class="button is-danger card-footer-item">Reset</button>
+             
+                    </footer>
+                  </div>
+            </div>
+        </div>
+      </div>
+</section>
+
+
+  <script src="score-keeper.js">
+   
+  </script>
+</body>
+</html>

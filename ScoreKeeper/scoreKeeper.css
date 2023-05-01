@@ -1,0 +1,26 @@
+body{ background-image: linear-gradient(to right, #a9af90,#3e9cbf);
+scale: 0.9;}
+.card{
+    box-shadow:-4px 4px 15px #9fa3a432, 2px 2px 15px rgba(64, 64, 64, 0.654);
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f7d43d; 
+  }
+  @keyframes confetti-rain {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+  
+  /* apply the animation to each confetti piece */
+  .confetti-piece {
+    animation: confetti-rain 4s ease-in-out infinite;
+  }
