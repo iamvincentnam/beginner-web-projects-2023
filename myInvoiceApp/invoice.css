@@ -20,7 +20,7 @@ transform:rotate(90deg); */
     width: 100%;
     margin: 0 auto;
     max-width: 700px;
-box-shadow:-4px 4px 15px #202e32, 2px 2px 15px rgb(64, 64, 64);
+box-shadow:-4px 4px 15px #9fa3a432, 2px 2px 15px rgba(64, 64, 64, 0.654);
 min-height: 100vh;
 }
 .tel{text-align: left; 
@@ -72,7 +72,9 @@ margin-top: .5rem;}
 #form input{
      padding:10px 7px;
      border: none;
-    background-color: transparent;}
+    background-color: transparent;
+  
+}
 #form input:placeholder-shown{
     font-size: 12px;
     font-weight: 600;
@@ -147,7 +149,7 @@ justify-content: space-between;
 align-items: center;
 width:102% !important; 
 height: 50px;
-color:  #586c5c;
+color:  #353535;
 /* font-family: 'elegant typewriter'; */
 font-weight: 800;
 font-size: .9rem;
@@ -164,21 +166,23 @@ padding-left: .5rem;
     /* background-image: linear-gradient(to right,#3e9cbf,#dfdcb9, #3e9cbf); */
     box-shadow:-2px 2px 5px #b4b4b457, 2px 2px 5px rgb(64, 64, 64);
 }
- }
+ 
 
  .qty,.price,.rate{
-   width:10%;
-  
+width:15%;
 text-align: center;
  }
+ 
  .del{
 width: 5%;
 margin: 0;
 display: inline-block;}
 .del img{cursor: pointer;}
 .del img:hover{scale: 1.1;}
- .rate, .qty, .price{font-family: 'elegant typewriter';
+ .rate, .qty, .price{
+font-family: 'elegant typewriter';
 font-weight:bolder;
+font-size: 115%;
 }
  .count
  {
@@ -229,7 +233,8 @@ font-size: 20px;
 font-size:  24px;
 }
 
-#insufficientBalance{color: red; text-transform: capitalize;
+#insufficientBalance{
+color: rgb(38, 38, 38); text-transform: capitalize;
 font-weight: 600;
 font-size: 14px;
 letter-spacing: 2px;
@@ -284,6 +289,7 @@ padding: 12px 20px;
 font-size: 20px;
 font-weight: 600;
 color: #565758;
+box-shadow:-4px 4px 15px #9fa3a432, 2px 2px 15px rgba(64, 64, 64, 0.654);
 
 }
 .enterpayment input:placeholder-shown{font-size: 14px;}

@@ -64,7 +64,7 @@ form.addEventListener('submit',(e)=>{
 // Create a delete icon and return it as an HTML element.
  function deleteIconFunc(){
    const image= document.createElement('img');
-   image.src ='./icons8-trash-32.png';
+   image.src ='./icons/icons8-trash-32.png';
    const deleteIconspan = document.createElement('span');
    deleteIconspan.classList.add('del');
    deleteIconspan.appendChild(image);
