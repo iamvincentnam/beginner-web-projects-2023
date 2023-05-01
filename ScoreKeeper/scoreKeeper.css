@@ -1,5 +1,8 @@
-body{ background-image: linear-gradient(to right, #a9af90,#3e9cbf);
-scale: 0.9;}
+ body{ 
+    /*background-image: linear-gradient(to right, #a9af90,#3e9cbf);
+scale: 0.9; */
+
+background-color: #055;}
 .card{
     box-shadow:-4px 4px 15px #9fa3a432, 2px 2px 15px rgba(64, 64, 64, 0.654);
 }
