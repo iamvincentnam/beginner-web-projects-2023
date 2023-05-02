@@ -1,9 +1,11 @@
  body{ 
-    /*background-image: linear-gradient(to right, #a9af90,#3e9cbf);
-scale: 0.9; */
-
-background-color: #055;}
-.card{
-    box-shadow:-4px 4px 15px #9fa3a432, 2px 2px 15px rgba(64, 64, 64, 0.654);
+     background-image: linear-gradient(to right, #13132b,#3e9cbf);
+scale: 0.8; 
+/* background-color:  #13132b; */
+min-height: 100vh;
 }
 
+.card{
+    box-shadow:-4px 4px 15px  #1C1C26, 2px 2px 15px rgba(64, 64, 64, 0.654);
+    border: none;
+}
