@@ -59,4 +59,4 @@ const resetBtn = document.querySelector('#resetBtn');
    winningScore =parseInt(this.value);
     resetFunc();
  });
- const section = document.querySelector("section");
+

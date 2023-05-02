@@ -1,0 +1,7 @@
+this  code  is a web-based score keeper card project, designed using HTML, CSS, and JavaScript. It allows two players to record their scores while playing a game, specifically the Nigerian game called Ayo.
+
+In the body section of the HTML file, there is a section tag with a class of "section" that contains a div with a class of "columns" and two child divs with classes of "column" and "card". This implementation is based on the Bulma framework, which provides an easy-to-use CSS framework for building responsive, mobile-first websites.
+
+The card contains an image related to the Ayo game and displays the score of the two players in a title. It also includes buttons for adding a score to player 1 and player 2 and a reset button to reset the scores. Additionally, it includes a dropdown menu to select the winning score limit.
+
+The JavaScript code defines two objects, p1 and p2, each containing the player's score, button, and display elements. The updateScore function updates the player's score whenever a button is clicked, and it checks if the game is over by comparing the player's score to the winning score. When the winning score is reached by a player, the function disables the buttons for both players and highlights the winning player's score in green while highlighting the losing player's score in red.
