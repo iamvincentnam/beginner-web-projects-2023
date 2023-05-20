@@ -5,7 +5,8 @@ padding: 0;
 background-color: #3e9cbf;
 font-weight: 400;
 font-family:'open-sans', sans-serif;
-scale: 0.9;
+scale: 1;
+padding: 2rem;
 /* 
 transform:rotate(90deg); */
 }
