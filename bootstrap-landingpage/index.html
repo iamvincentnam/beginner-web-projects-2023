@@ -100,10 +100,58 @@ transition: all .3s;}
 }
 #contact{padding:0}
   #contact .container{background-color: #586c56;}
-  #contact ::placeholder {color: rgba(181, 181, 181, 0.445);}
+  #contact ::placeholder {color: rgba(27, 27, 27, 0.445);
+  font-weight: bold;}
 
   #contact  button{color: #586c56;
   text-transform: uppercase;
+}
+
+
+@media screen and (min-width: 980px){
+  footer{
+    min-height: auto !important;
+}
+  .footer_div >*{min-height:300px !important;
+  }
+}
+#footer-section{background-color: #586c56;
+margin-top: 0 !important;
+padding-top: 0 !important;}
+.footer_div h3{
+  color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+    font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration: underline;
+cursor: pointer;}
+footer .sub_section ul li{ 
+ transition: .3s ease-out;}
+footer .sub_section ul li:hover{
+color: white;
+text-decoration: underline;
+
+}
+footer .sub_section ul{
+  display: flex; 
+
+flex-direction: column; 
+justify-content: space-evenly;
+height: 100%;
+/* background-color:#b3b3b3;  */
+list-style-type: none;
+margin: 0;
+cursor: pointer;
+padding: 0;
+font-size: .9rem;
+font-weight: bold;
+color: rgba(0, 0, 0, 0.439);
+}
+.copyright{color: rgba(0, 0, 0, 0.439);}
+.keepInTouch-Div, .keepInTouch-Div >*{
+
+  height:100%;
 }
   </style>
 </head>
@@ -139,7 +187,7 @@ transition: all .3s;}
 
 <!--Carousel Section begins here-->
 
-<div id="carouselExampleCaptions" class="carousel slide  col-lg-12 bg-secondary mx-auto my-5">
+<div id="carouselExampleCaptions" class="carousel slide  col-lg-12 mx-auto my-5">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -389,8 +437,86 @@ Oil Filter
  </section>
 
 <!--Footer-->
+<section id="footer-section" class="footer-section section-padding col-md-12 mb-0 pb-0">
+<footer>
+  <div class="container footer_div d-flex 
+  flex-column justify-content-evenly pt-5">
+    <div class="row">
+      <div class="sub_section col-lg-3 col-sm-12 d-flex flex-column justify-content-evenly mb-4">
+        <h3>Quick Links</h3>
+        <ul>
+            <li> About Us</li>
+            <li> FAQ</li>
+            <li>Help</li>
+            <li>My account</li>
+            <li>Contacts</li>
+        </ul>
+      </div>
+
+      <div class="sub_section col-lg-3 col-sm-12 d-flex flex-column justify-content-evenly mb-4">
+        <h3>Products</h3>
+        <ul><li>Fruits</li>
+            <li> Tyres</li>
+            <li> Batteries</li>
+            <li>Oil FIlter</li>
+            <li>Head Lamps</li>
+            <li>Engine Seating</li>
+          
+        </ul>
+      </div>
+
+      <div class="sub_section col-lg-3 col-sm-12 d-flex flex-column justify-content-evenly mb-4">
+        <h3>Contacts</h3>
+        <ul>
+            <li> #47 Oromenike, D/Line, PH</li>
+            <li>+2347030632041</li>
+            <li>info@ikokuonline.com</li>
+        
+        </ul>
+      </div>
+
+      <div class="keepInTouch-Div sub_section  col-lg-3 col-sm-12 d-flex flex-column justify-content-around">
+        <div>
+          <h3>Keep IN Touch</h3>
+          <form action="#" class="d-flex bg-light my-4">
+          <input type="email" class="form-control" id="enterEmail" aria-describedby="emailHelp" placeholder="Your email">
+          <i class="bi bi-arrow-right-square fs-3"></i>
+          </form>
+        
+        </div>
+         
+      
+       
+         
+            <div class="follow-us">
+              <h3 class="">Follow Us</h3>
+              <div class="socials d-flex justify-content-evenly w-55">
+                <i class="bi bi-twitter fs-3"  ></i>
+                <i class="bi bi-facebook fs-3"></i>
+                <i class="bi bi-instagram fs-3"></i>
+                <i class="bi bi-envelope fs-3"></i>
+              </div>
+            </div>
+        
+        
+          </div>
+      </div>
+    </div>
 
 
+    <div class="row">
+      <div class="col-12">
+        <hr style="height:3.5px;border-width:0;background-color:rgb(255, 255, 255)">
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-md-12 text-center fw-bold">
+    <p id="copyright" class="col-lg-12 copyright">Copyright &#169; 2023 Ikokuonline</p>
+  </div>
+</div>
+</footer>
+</section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
 </script>
 </body>
