@@ -1,0 +1,68 @@
+body{box-sizing: border-box;
+    /* background-color: #252531; */
+    background-image: linear-gradient(to right, olive,black,olive,black);}
+    
+    #container{
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+        margin: 2rem auto;
+        background-image: linear-gradient(to bottom, olive,olive,black,olive,black);
+        border-radius: 10px;
+        /* background-image:linear-gradient(to left,#2e9599, #0c3233); */
+        /* border: 2px solid white; */
+        min-height: 600px;
+        box-shadow: 2px 2px 13px rgba(128, 128, 0, 0.219), -8px -8px 8px rgba(42, 42, 42, 0.192);
+    transform: scale(0.9);
+    }
+    .imge_container{
+        width: 200px;
+        height: 200px;
+    margin:10px auto ;
+    border: 1px solid white;
+    box-shadow: -2px -2px  4px rgba(0, 0, 0, 0.301), 4px 4px 4px rgba(0, 0, 0, 0.301);
+    position: relative;
+    
+    }
+    
+    .imge_container img{
+        border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    }
+    .track{text-align: center;
+    margin-top: 30px;
+    color:silver;
+    letter-spacing: 2px;
+    }
+    .track .artiste_name{font-family: 'calibri'; 
+    font-size: 26px;
+    margin:0;
+    }
+    .track .title{color:  white ;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom:50px;
+    
+    }
+    .icon_div{width: 100%;
+        margin: 0 auto;}
+    .icons{ display: inline-block;
+         width: 24%;
+         cursor: pointer;
+          /* background-color: #252531; */
+         text-align: center;}
+    .icon_div img{background-color:transparent;
+    border: white;}
+    .icon_div .icon_text{display: block; color: white;
+    font-weight: 600;}
+    
+    .progress_bar{width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    }
+    .progress_bar img{height: 100%;
+    width: 100%;}
