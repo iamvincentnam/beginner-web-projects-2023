@@ -1,0 +1,506 @@
+@import url(https://fonts.google.com/specimen/Raleway);
+@import url(https://fonts.google.com/specimen/Open+Sans);
+
+body
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+color: white;
+font-family: 'open sans', sans-serif;
+font-weight: 400;
+background-color:  hsl(218, 28%, 13%);
+position: relative;
+}
+        /* HEADER SECTION STYLING */
+header
+{
+    background-color: hsl(217, 28%, 15%);
+}
+/* Nav sttyling */
+.container
+{
+    /* background-color:  hsl(217, 28%, 16%); */
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 100%;
+   
+}
+header .container
+{ 
+ 
+    background-image: url('imgs/bg-curvy-desktop.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:left bottom;
+    padding-bottom:15px;
+    /* border: 2px solid white; */
+   }
+   
+.container nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding: 15px;
+
+}
+.nav-logo-img{width: 150px;
+}
+#hamburger_img{
+ background-color: rgba(255, 255, 255, 0.94);
+  margin: 0;
+  display: none;
+  border-radius: 3px;
+  padding:.5rem;
+  
+ cursor: pointer;
+ outline: 0;
+ transition: .2s ease-in-out all;
+ width: 40px;
+}
+#hamburger_img:active
+{
+transform: scale(0.8);
+}
+nav .nav-links{
+display: flex;
+padding: 0;
+list-style-type: none;
+}
+
+
+ nav .nav-links a
+{
+color:white;
+text-decoration: none;
+padding: 0;
+margin: 0 20px;
+font-family: 'Raleway',sans-serif;
+font-size: 120%;
+transition: 0.2s ease-in all;
+}
+
+nav .nav-links a:hover
+{
+opacity: .8;
+border-bottom: 2px solid orange !important;
+padding-bottom: 0;
+}
+
+.hero img
+{
+max-width: 100%;
+margin: 0 auto;
+}
+
+        /* Hero styling */
+
+
+.hero{width: 600px;
+max-width: 100%;
+margin: 20px auto;
+text-align: center;
+}
+.hero h1{
+    line-height: 1.3;
+}
+.hero p
+{line-height: 1.5; 
+    font-size: 130%;
+/* letter-spacing: 2px; */
+word-spacing: 2px;
+}
+.hero .btn{ 
+color: white;
+padding: 15px 45px;
+border-radius: 50px;
+background-image: linear-gradient(to right, hsl(176, 68%, 64%),hsl(198, 60%, 50%));
+border: 0;
+font-size: 110%;
+letter-spacing: 2px;
+cursor: pointer;
+/* margin-bottom: 1rem; */
+}
+#feature-section{display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap:50px 80px;
+padding-top: 5rem;
+align-items: center;
+/* margin-top: 2rem; */
+}
+.container .feature{
+    width: 395px;
+    padding: 1rem;
+    text-align: center;
+    /* border: 2px solid silver; */
+}
+.container .feature p{line-height: 1.5;}
+
+/* STAY PRODUCTIVE SECTION */
+
+#stay_productive_section{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    gap:50px 90px;
+ /* border: 1px solid white; */
+}
+#stay_productive_section >*{
+    padding: 2rem;
+    
+}
+#stay_productive_section img{
+    /* border: 1px solid white; */
+    width: 400px;
+   
+}
+.container .stay_productive_text{
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+    /* align-items: start; */
+  line-height: 1.5;
+  /* flex: 1; */
+  flex-shrink: 2;
+/* border: 1px solid white; */
+  width: 500px;
+
+
+
+
+}
+.stay_productive_text h2
+{
+font-size: 2rem;
+margin: 0;
+line-height: 1.3;
+word-spacing:3px;
+}
+
+.stay_productive_text p{ 
+    line-height: 1.5;
+}
+.stay_productive_text .stay_productive_link{text-decoration: none;
+border-bottom: 2px solid  hsl(176, 68%, 64%); 
+color:  hsl(176, 68%, 64%);
+padding-bottom: 3px;
+display: inline !important;
+max-width :170px;
+margin: 0;
+box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+
+}
+#arrow_image
+{width: 20px !important; 
+ margin-bottom:-3px;
+ margin-left: 2px;
+padding: 0; 
+display: inline;
+}
+
+
+        /* TESTIMONIAL SECTION */
+
+#testimonials{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+box-sizing: border-box;
+padding: 2rem;
+/* border: 2px solid yellow; */
+/* to make your child containers responsive with screen size, include the flex wrap property  */
+flex-wrap: wrap;
+}
+
+#testimonials .testimonials_div{
+background-color:  hsl(219, 30%, 18%);
+/* min-width is the width that the sibling containers must be at least in a desktop view */
+min-width: 300px;
+/* there is something dicy about the flex:1 property-value pair. this makes it possible for the sibling contents to achieve a convenient/adaptable width by sharing the spaces available for them equally. */
+flex: 1;
+border-radius: 10px;
+padding:1.4rem;
+box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+.testimonials_div img{
+ border-radius: 50%;
+width: 40px;
+
+
+}
+.testimonials_div .user
+{
+  
+display: flex;
+justify-content:flex-start;
+gap: 15px;
+align-items: center;
+margin: 0;
+padding: 0;
+/* border: 2px solid yellow; */
+
+}
+
+ .testimonials_div .user h5,.testimonials_div .user h6
+ {
+margin:5px 0;
+    }
+    .testimonials_div .user h6{
+        opacity: 0.7;
+    font-weight:  normal;}
+    .testimonials_div p{font-size: 90%;
+   line-height: 1.5;
+}
+
+
+
+
+        /* CALL TO ACTION SECTION */
+.call_to_action{
+background-color: hsl(217, 28%, 15%);
+box-sizing: border-box;
+text-align: center;
+padding: 3rem 2rem;
+ width: 800px;
+ max-width: 100%;
+   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+   margin: 4rem auto -7rem;
+   position: relative;
+   border-radius:10px ;
+   z-index: 4;
+}
+.call_to_action p
+{
+line-height: 1.5;
+ margin-bottom: 2rem;
+}
+.call_to_action h2
+{
+    margin:0px;
+}
+
+
+
+.call_to_action .form
+{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 25px;
+}
+
+.call_to_action .form >*
+{
+    flex: 1;
+}
+.call_to_action .btn
+{
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%),hsl(198, 60%, 50%));
+    border: 0;
+    font-size: 100%;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.call_to_action .form input
+{
+ border-radius: 50px;
+padding: 10px 20px; 
+border: none;
+border: 0;
+flex-grow: 2;
+}
+*{box-sizing: border-box;}
+
+                /* FOOTER SECTION */
+
+footer {
+box-sizing: border-box;
+background-color: hsl(216, 53%, 9%);
+flex-direction: column;
+justify-content: center;
+align-items:flex-start;
+padding: 150px   2rem 150px 2rem;
+display: flex;
+gap: 1rem 0;
+
+
+}
+
+.footer-logo
+{
+ width:100%;
+    
+    }
+
+.second-row-flex
+{
+display: flex;
+flex-wrap: wrap;
+justify-content:center;
+align-items:flex-start;
+gap: 0 1rem;
+box-sizing: border-box;
+}
+.second-row-flex .column ul
+{
+    list-style-type: none;
+    text-align: left;
+    line-height: 2;
+    text-align: left !important;
+    padding: 0;
+    margin:0;
+    
+}
+
+.column ul li
+{
+cursor: pointer;
+transition: .2s ease-in-out all;
+}
+
+
+.column ul li:hover
+{
+opacity:0.8;
+font-size: 16px;
+}
+.second-row-flex .column
+{
+    /* border: 2px solid white; */
+    flex: 1;
+    min-width: 200px;
+    padding: 0 1rem;
+    text-align: left;
+}
+
+
+.footer_text span
+{
+    display: inline-block;
+    margin:-1.5rem  0 0 2rem;
+cursor: pointer;
+}
+.socials
+{
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ gap: 5px;
+} 
+  
+
+/*MEDIA QUERIES STYILING GOES HERE*/
+  
+  @media screen and (max-width: 768px) {
+    .nav-logo-img
+    {
+        width: 100px; 
+     }
+     
+     nav .nav-links a
+     {
+        font-size: 95%;
+        padding: 10px;
+    }
+
+    header .container
+    { 
+         
+    background-image: url('imgs/bg-curvy-mobile.svg');
+        padding: 0;
+    }
+    .call_to_action 
+    {
+        width: 90%;
+    margin: 0 auto;
+}
+    .call_to_action .form
+    {
+        flex-direction: column;
+        
+    }
+.call_to_action .form .btn
+{
+ width: 55%;
+padding: 10px;
+align-self: center;
+font-size: 90%;
+}
+.second-row-flex
+{gap: 2rem 0;
+}
+.second-row-flex .column
+{
+    flex:auto;
+    width: 100%;
+    font-size: 90%;
+}
+
+.hero h1
+{
+    line-height: 1;
+}
+.hero p
+{ 
+font-size: 95%;
+margin-bottom: 2rem;
+word-spacing: 2px;
+}
+.hero .btn
+{ 
+    padding: 10px 20px
+}
+
+.socials
+{justify-content: flex-start;
+padding: 0 20px 0 0 !important;
+}
+}
+
+
+@media screen and (max-width: 680px) {
+    
+nav .nav-links
+    {
+        display: none; 
+     }
+ nav #hamburger_img
+{
+display: block;
+}
+ .toggle_nav_link_display
+        
+    {
+
+     display: flex !important;
+    width: 100%;
+    opacity: 1;
+    align-items: center;
+    gap: 1rem 0;
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    font-weight:600;
+    letter-spacing: 2px;
+    height: 120px;
+       /* border: 1px solid white; */
+    }
+
+    .toggle_nav_link_display li a
+    {
+         padding: 0 0 2px 0 !important;
+    }
+}
+
+
