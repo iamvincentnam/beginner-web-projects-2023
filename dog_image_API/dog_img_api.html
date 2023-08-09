@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+.img_container{max-width: 500px;
+min-height: auto;
+/* border: 2px solid purple; */
+margin: 0;
+padding: 0;}
+.img_container img{width: 100%;
+height: auto;}
+.get_cat{display: flex;
+   box-sizing: border-box;
+   padding: 1rem;
+   width: 100%;
+   margin: 0 auto;
+   background-image: linear-gradient(to bottom, olive,olive,black,olive,black);
+        border-radius: 10px;
+   /* border: 1px solid gray; */
+flex-direction: column;
+justify-content: center;
+min-height: 100vh;
+align-items: center;}
+button{background-color: rgba(45, 69, 6, 0.939); color: white;
+text-transform: uppercase;
+border: none;
+outline: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
+}
+/* .btn{margin: 0; padding: 0;}
+button:active{background-color: rgb(64, 16, 16);
+transform: scale(0.9); } */
+.get_cat h1{color: white;
+margin: 0;
+text-decoration: underline;
+justify-self:flex-end;}
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+   
+
+      <div class="get_cat">
+         <h1>Dog Image API</h1>
+         <div class="img_container">
+            <img src="./omah_lay_album_cover.jpeg" alt="cat image" id="image">
+         </div>
+         <!-- <div class="btn">
+            <button>Get Pics</button>
+         </div> -->
+        
+      </div>
+  
+   <script>
+// const button = document.querySelector('.get_cat .btn');
+const image = document.querySelector('.get_cat #image');
+
+const Unallowed_ext =['.webm','.mp4','.gif']
+function Dog_API(){
+   fetch('https://random.dog/woof.json')
+   .then(response=> response.json())
+   .then(data =>{
+      const url =`${data.url}`;
+      const extension =url.substring( url.lastIndexOf('.'));
+      if(Unallowed_ext.includes(extension))  {
+         Dog_API();
+console.log(url);
+      }
+      else{
+image.src =url;
+      }  
+
+      });
+    
+      
+}
+setInterval(Dog_API,2000);
+
+
+   </script> 
+</body>
+</html>
