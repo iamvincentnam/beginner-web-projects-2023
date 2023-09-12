@@ -47,7 +47,7 @@ padding: 15px;
 }
 .nav-logo-img{width: 150px;
 }
-#hamburger_img{
+/* #hamburger_img{
  background-color: rgba(255, 255, 255, 0.94);
   margin: 0;
   display: none;
@@ -58,8 +58,8 @@ padding: 15px;
  outline: 0;
  transition: .2s ease-in-out all;
  width: 40px;
-}
-#hamburger_img:active
+} */
+#hamburger_btn:active
 {
 transform: scale(0.8);
 }
@@ -473,11 +473,13 @@ padding: 0 20px 0 0 !important;
     
 nav .nav-links
     {
+        opacity: 0;
         display: none; 
+        transition: 1s opacity ease !important;
      }
- nav #hamburger_img
+ nav #hamburger_btn
 {
-display: block;
+display: flex !important;
 }
  .toggle_nav_link_display
         
