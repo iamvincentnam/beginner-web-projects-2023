@@ -1,0 +1,54 @@
+*{margin: 0;
+padding: 0;
+}
+:root{ --dark_blue : hsl(218, 28%, 13%);
+    --silver: #e6e6e6;
+}
+.container
+{
+    background-image: url(assets/Joker-walpaper\ -\ Copy.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+background-position:top;
+}
+.card-text
+{
+    /* min-height: 500px; */
+   height: 200px;
+overflow: auto;
+/* border: 3px inset purple; */
+padding-left: 1rem;
+}
+.card-text::-webkit-scrollbar {
+    width: 4px;
+  }
+  .card-text::-webkit-scrollbar-thumb {
+    background-color: var(--silver); 
+    /* this will Adjust the color of the scrollbar thumb */
+  }
+.card{color: var(--dark_blue);}
+body
+{
+    margin: 0;
+padding:0;
+background-color: var(--dark_blue);
+}
+*
+{
+    box-sizing: border-box;
+}
+label
+{
+    letter-spacing: 2px !important;
+}
+
+.movieName{
+    height: auto;
+      
+    /* text-align: center;
+     */
+    }
+.card-img-top
+{width: 100% !important;
+height: 250px !important;
+}
